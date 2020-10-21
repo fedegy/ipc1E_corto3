@@ -2,7 +2,6 @@ from flask import Flask,request,jsonify
 from misDatos import misDatos
 from Inversor import Inversor
 
-
 datosget=[]
 #Se listan los datos
 datosget.append(misDatos(201901073,'Federico'))
@@ -40,7 +39,6 @@ def Inversor():
         for cadena in datoscadenaentrada:
                 response["resultado"]=cadena.resultado
                 return response
-
 
 if __name__ == "__main__":
     app.run(threaded=True,port=5000,debug=True)
